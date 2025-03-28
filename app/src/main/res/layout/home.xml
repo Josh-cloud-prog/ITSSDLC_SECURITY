@@ -1,0 +1,186 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f2">
+
+    <!-- Main content layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Toolbar for the navigation drawer -->
+
+            <!-- MapView -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?attr/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mv_home"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:contentDescription="Map Home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+            <!-- First Row of Buttons -->
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/mv_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageButton
+                    android:id="@+id/btn_nearby"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="#88a78e"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Nearby Button"
+                    app:srcCompat="@drawable/nearby" />
+
+                <ImageButton
+                    android:id="@+id/btn_accommodation"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="#88a78e"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Accommodation Button"
+                    app:srcCompat="@drawable/accommodation" />
+
+                <ImageButton
+                    android:id="@+id/btn_location"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="#88a78e"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Location Button"
+                    app:srcCompat="@drawable/location" />
+            </LinearLayout>
+
+            <!-- Second Row of Buttons -->
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/row1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageButton
+                    android:id="@+id/btn_restaurant"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="#88a78e"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Restaurant Button"
+                    app:srcCompat="@drawable/restaurant" />
+
+                <ImageButton
+                    android:id="@+id/btn_attraction"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="#88a78e"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Attraction Button"
+                    app:srcCompat="@drawable/attraction" />
+
+                <ImageButton
+                    android:id="@+id/btn_place_details"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="#88a78e"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Place Details Button"
+                    app:srcCompat="@drawable/place_details" />
+            </LinearLayout>
+
+            <!-- Saved Itineraries Title and Plus Button -->
+            <LinearLayout
+                android:id="@+id/saved_itinerary_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/row2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_saved_itinerary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Saved Itineraries"
+                    android:textColor="#88a78e"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Plus Button -->
+                <ImageButton
+                    android:id="@+id/btn_add_itinerary"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="Add Itinerary Button"
+                    app:srcCompat="@drawable/ic_add"
+                    android:layout_marginStart="8dp"
+                    app:tint="?attr/colorPrimary" />
+
+                <ImageButton
+                    android:id="@+id/btn_dummy_notify"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="Notify Button"
+                    app:srcCompat="@drawable/ic_notify"
+                    android:layout_marginStart="8dp"
+                    app:tint="?attr/colorPrimary" />
+            </LinearLayout>
+
+            <!-- Scrollable Saved Itineraries RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_saved_itinerary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/saved_itinerary_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "331056806868",
+    "project_id": "mco3-final",
+    "storage_bucket": "mco3-final.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331056806868:android:bf03955bee64f0c9bc3441",
+        "android_client_info": {
+          "package_name": "com.mobdeve.s19.group10.mco2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM9s1ELn3luE9x_dfQ8TfZM0wRzlRgdZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

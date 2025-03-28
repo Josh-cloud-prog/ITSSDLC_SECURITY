@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@drawable/card_background">
+
+    <ImageView
+        android:id="@+id/restaurantImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/restaurantName"
+        android:src="@drawable/kubli_bistro"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/restaurantName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Name"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#404040"
+        app:layout_constraintStart_toEndOf="@id/restaurantImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/restaurantRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rating: 4.5"
+        android:textColor="#404040"
+        app:layout_constraintStart_toStartOf="@id/restaurantName"
+        app:layout_constraintTop_toBottomOf="@id/restaurantName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/restaurantLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Manila, Philippines"
+        android:textColor="#404040"
+        app:layout_constraintStart_toStartOf="@id/restaurantName"
+        app:layout_constraintTop_toBottomOf="@id/restaurantRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

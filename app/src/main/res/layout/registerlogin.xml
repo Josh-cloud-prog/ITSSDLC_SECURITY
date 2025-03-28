@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88a78e">
+
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="TravelLite"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/tv_app_subtitle"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:text="Discover the world with ease. Your adventure starts here."
+        android:textColor="#f9f9f2"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_title" />
+
+    <Button
+        android:id="@+id/btn_register_reglogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="Register"
+        android:backgroundTint="#f9f9f2"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textColor="#88a78e"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_subtitle" />
+
+    <Button
+        android:id="@+id/btn_login_reglogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Login"
+        android:backgroundTint="#f9f9f2"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textColor="#88a78e"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register_reglogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

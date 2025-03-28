@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_nearby_places"
+        android:title="Nearby Places" />
+    <item
+        android:id="@+id/nav_place_details"
+        android:title="Place Details" />
+    <item
+        android:id="@+id/nav_location"
+        android:title="Location" />
+    <item
+        android:id="@+id/nav_attraction"
+        android:title="Attractions" />
+    <item
+        android:id="@+id/nav_restaurant"
+        android:title="Restaurants" />
+    <item
+        android:id="@+id/nav_accommodation"
+        android:title="Accommodations" />
+
+    <!-- Customizing Create Itinerary -->
+    <item
+        android:id="@+id/nav_create_itinerary"
+        android:title="Create Itinerary"
+        android:icon="@drawable/ic_add"
+        android:textColor="@color/primaryColor"
+        android:textStyle="bold" />
+</menu>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f2">
+
+    <TextView
+        android:id="@+id/tv_place_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Boracay"
+        android:textColor="#88a78e"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toEndOf="@+id/btn_location_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageButton
+        android:id="@+id/btn_location_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="#88a78e"
+        android:contentDescription="Location Icon"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033"
+        app:srcCompat="@drawable/location" />
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:text="10 Kilometers away"
+        android:textColor="#88a78e"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toEndOf="@+id/btn_location_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_place_title" />
+
+    <ImageView
+        android:id="@+id/iv_place_image"
+        android:layout_width="350dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/boracay_place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance" />
+
+    <TextView
+        android:id="@+id/tv_place_description"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="Boracay is a small tropical island in the Philippines, known for its stunning white-sand beaches, crystal-clear waters, and vibrant nightlife. Located in the Western Visayas region, it has become one of the country's top tourist destinations, attracting visitors for its relaxing atmosphere, water activities like snorkeling, diving, and kiteboarding, and its beautiful sunsets. White Beach is the most famous area, lined with resorts, restaurants, and bars. "
+        android:textColor="#88a78e"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_place_image" />
+
+    <Button
+        android:id="@+id/btn_checkin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:backgroundTint="#88a78e"
+        android:fontFamily="sans-serif"
+        android:text="Check-in"
+        android:textAlignment="center"
+        android:textColor="#f9f9f2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_place_description" />
+
+    <Button
+        android:id="@+id/btn_save_place"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Save"
+        android:backgroundTint="#88a78e"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textColor="#f9f9f2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_checkin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

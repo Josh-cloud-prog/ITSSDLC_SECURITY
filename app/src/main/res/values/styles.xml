@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.MCO2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Reference your colors here -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!-- Custom style for Navigation Drawer menu items -->
+    <style name="NavMenuItemStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- Custom style specifically for the Create Itinerary item -->
+    <style name="NavCreateItineraryStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

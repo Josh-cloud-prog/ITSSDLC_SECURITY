@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f2">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/tv_nearby_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="sans-serif"
+        android:text="Nearby Places"
+        android:textColor="#88a78e"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toEndOf="@+id/btn_nearby_nearbyplaces"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Current Location TextView -->
+    <TextView
+        android:id="@+id/tv_current_loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif"
+        android:text="Current Location"
+        android:textColor="#88a78e"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nearby_title" />
+
+    <!-- Map View to show the nearby places -->
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_current_loc">
+
+        <!-- SupportMapFragment inside FrameLayout for dynamic behavior -->
+        <fragment
+            android:id="@+id/map_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="map showing nearby" />
+    </FrameLayout>
+
+    <!-- Button to trigger nearby places actions -->
+
+    <!-- RecyclerView to display nearby places -->
+    <ImageButton
+        android:id="@+id/btn_nearby_nearbyplaces"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#88a78e"
+        android:contentDescription="Nearby Places button"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nearby" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_nearbyplaces"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
